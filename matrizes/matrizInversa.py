@@ -1,11 +1,11 @@
 import numpy as np
 from matrizAdjunta import adjunta
-from determinante import det
+from determinante import detLaplace
 from multiplicacaoMatrizes import multMatrizes
 from numpy.random import default_rng
 
 def inversa(matriz):
-    return adjunta(matriz) / det(matriz)
+    return adjunta(matriz) / detLaplace(matriz)
 
 # matriz = default_rng().integers(10, size=(3, 3))
 matriz = np.array([[1, 2, 3],
@@ -19,7 +19,7 @@ matrizAdjunta = adjunta(matriz)
 print("\n-----------------------------------\nMatriz Adjunta: \n")
 print(matrizAdjunta, f"\n\nDimensão: {matrizAdjunta.shape}")
 
-determinanteMatriz = det(matriz)
+determinanteMatriz = detLaplace(matriz)
 print(f"\n-----------------------------------\nDeterminante = {determinanteMatriz}")
 
 print("\n-----------------------------------\nMatriz Inversa: \n")

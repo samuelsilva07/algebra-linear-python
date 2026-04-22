@@ -3,6 +3,7 @@ import math
 from numpy.random import default_rng
 
 # mmc: math.lcm()
+# mdc: math.gcd()
 
 def gauss(matriz):
     for i in range(matriz.shape[0]):
@@ -29,13 +30,16 @@ def gauss(matriz):
             print("\n-----------------------------------\nMatriz atual: \n")
             print(matriz, f"\n\nDimensão: {matriz.shape}")
     
-    # for i in range(matriz.shape[0]):
-    #     if matriz[i][i] != 0:
-    #         divisor = math.lcm()
-    #         matriz[i] /= divisor
+    # reduz as linhas para suas formas "irredutíveis"
+    for i in range(matriz.shape[0]):
+        if matriz[i][i] != 0:
+            divisor = math.gcd(*matriz[i])
+            matriz[i] = abs(matriz[i] / divisor).astype("int64")
+        
+
     return matriz
 
-matriz = default_rng().integers(1, 10, size=(3, 3))
+matriz = default_rng().integers(10, size=(3, 3))
 print("\n-----------------------------------\nMatriz 1: \n")
 print(matriz, f"\n\nDimensão: {matriz.shape}")
 matrizEscalonada = gauss(matriz)
