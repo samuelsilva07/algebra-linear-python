@@ -43,8 +43,6 @@ def detSarrus(matriz):
 
         somaDiagonal2 += produtoDiagonal
         valorInicialColuna -= 1
-        
-    print(f"Soma diagonal 1 = {somaDiagonal1}\nSoma diagonal 2 = {somaDiagonal2}\n")
 
     return somaDiagonal1 - somaDiagonal2
        
