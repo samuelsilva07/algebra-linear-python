@@ -7,7 +7,7 @@ def modulo(vetor):
         soma += pow(valor, 2)
     return math.sqrt(soma)
     
-vetor = np.array([1, 3])
-print(f"\n-----------------------------------\nVetor: {vetor}")
-moduloVetor = modulo(vetor)
-print(f"\n-----------------------------------\nProduto escalar: {moduloVetor}")
+# vetor = np.array([1, 3])
+# print(f"\n-----------------------------------\nVetor: {vetor}")
+# moduloVetor = modulo(vetor)
+# print(f"\n-----------------------------------\nProduto escalar: {moduloVetor}")

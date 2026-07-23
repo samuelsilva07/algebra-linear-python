@@ -2,19 +2,20 @@ import numpy as np
 from numpy.random import default_rng # gera arrays com valores aleatórios
 
 def multMatrizes(matriz1, matriz2):
-    if matriz1.shape[1] == matriz2.shape[0]:
-        quantidadeProdutos = matriz1.shape[1] 
-        linhasMatrizMult = matriz1.shape[0]
-        colunasMatrizMult = matriz2.shape[1]
-        matrizMult = np.zeros((linhasMatrizMult, colunasMatrizMult))
+    if matriz1.shape[1] != matriz2.shape[0]:
+        return "Não é possivel multiplicar as matrizes."
 
-        for i in range(linhasMatrizMult):
-            for j in range(colunasMatrizMult):
-                for k in range(quantidadeProdutos):
-                    matrizMult[i][j] += (matriz1[i][k] * matriz2[k][j])
+    quantidadeProdutos = matriz1.shape[1] 
+    linhasMatrizMult = matriz1.shape[0]
+    colunasMatrizMult = matriz2.shape[1]
+    matrizMult = np.zeros((linhasMatrizMult, colunasMatrizMult))
 
-        return matrizMult.astype(np.int64)
-    return "Não é possivel multiplicar as matrizes."
+    for i in range(linhasMatrizMult):
+        for j in range(colunasMatrizMult):
+            for k in range(quantidadeProdutos):
+                matrizMult[i][j] += (matriz1[i][k] * matriz2[k][j])
+
+    return matrizMult.astype(np.int64)
 
 # m1 = default_rng().integers(5, size=(5, 3))
 # m2 = default_rng().integers(5, size=(3, 4))

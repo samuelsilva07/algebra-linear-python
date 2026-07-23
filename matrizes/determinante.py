@@ -2,7 +2,7 @@ import numpy as np
 from cofator import cofator
 from numpy.random import default_rng
 
-def detSarrus(matriz):
+def detSarrus(matriz):  # função baseada no método de Laplace
     if matriz.shape[0] == 1 and matriz.shape[0] == 1:
         return matriz[0][0]  
 
