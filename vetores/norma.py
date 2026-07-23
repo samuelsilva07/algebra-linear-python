@@ -2,28 +2,16 @@ import numpy as np
 from math import sqrt
 
 def norma1(vetor):
-  modulo_valores = []
-  for elemento in vetor:
-    modulo_valores.append(abs(elemento))
-  return sum(modulo_valores)
+  return sum([abs(elemento) for elemento in vetor])
 
 def normaEuclidiana(vetor):
-  soma = 0
-  for elemento in vetor:
-    soma += elemento ** 2
-  return sqrt(soma)
+  return sqrt(sum(elemento for elemento in vetor))
 
 def normaInfinito(vetor):
-  modulo_valores = []
-  for elemento in vetor:
-    modulo_valores.append(abs(elemento))
-  return max(modulo_valores)
+  return max([abs(elemento) for elemento in vetor])
 
 def normaP(vetor, p):
-  soma = 0
-  for elemento in vetor:
-    soma += abs(elemento) ** p
-  return soma ** (1 / p)
+  return sum([abs(elemento) ** p for elemento in vetor]) ** (1 / p)
 
 def normaInduzida(vetor, matriz):
     matriz_produto = np.linalg.matmul(matriz, vetor)

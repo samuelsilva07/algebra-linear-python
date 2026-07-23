@@ -11,7 +11,6 @@ def somaMatrizes(matriz1, matriz2):
 
 # linhas = int(input("Digite a quantidade de linhas das matrizes: "))
 # colunas = int(input("Digite a quantidade de colunas das matrizes: "))
-
 # m1 = default_rng().integers(20, size=(linhas, colunas))
 # m2 = default_rng().integers(20, size=(linhas, colunas))
 # print("\n-----------------------------------\nMatriz 1: \n")
