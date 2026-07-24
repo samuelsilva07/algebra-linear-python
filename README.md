@@ -6,8 +6,8 @@ Com este projeto, busco entender mais o poder da linguagem para aplicações na 
 
 ## 📌 Algoritmos implementados
 
-- **Operações com vetores:** soma, produto, normas, módulo, etc
-- **Operações com matrizes:** inversa, transposta, adjunta, cálculo de cofatores, etc  
+- **Algoritmos e operações com vetores:** soma, produto, normas, módulo, etc
+- **Algoritmos e operações com matrizes:** inversa, transposta, adjunta, cálculo de cofatores, etc  
 - **Fatoração de matrizes (em desenvolvimento):** Fatoração QR, Fatoração LU, etc
 - **Escalonamento de sistemas (em desenvolvimento):**:
 - **Métodos iterativos para resolução de sistemas (em desenvolvimento):**: Jacobi, Gauss-Seidel, etc
